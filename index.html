@@ -68,10 +68,89 @@
             text-align: center;
         }
 
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Download Button Styles */
+        .download-section {
+            margin-top: 2.5rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .download-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .download-section p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            color: #667eea;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border: none;
+            cursor: pointer;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            background: #f0f0f0;
+        }
+
+        .download-btn svg {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+        }
+
         .container {
             max-width: 1200px;
             margin: auto;
             padding: 4rem 2rem;
+        }
+
+        .container section {
+            margin-bottom: 3rem;
+        }
+
+        .container h2 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .container p {
+            color: var(--text-light);
+            font-size: 1.1rem;
         }
 
         footer {
@@ -88,11 +167,36 @@
             gap: 2rem;
         }
 
+        .footer-content h3 {
+            margin-bottom: 1rem;
+        }
+
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
+            margin-top: 2rem;
             border-top: 1px solid rgba(255,255,255,0.1);
             color: rgba(255,255,255,0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .download-section {
+                padding: 1.5rem;
+            }
+
+            .download-btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -114,6 +218,17 @@
 <section id="home" class="hero">
     <h1>National Citizen Data Vault</h1>
     <p>Transforming governance through secure, privacy-compliant citizen data.</p>
+    
+    <div class="download-section">
+        <h3>📄 Comprehensive Documentation</h3>
+        <p>Download our detailed guide covering technical architecture, security framework, implementation roadmap, use cases, and more.</p>
+        <a href="NCDV_Detailed_Documentation.docx" class="download-btn" download>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Download Complete Guide
+        </a>
+    </div>
 </section>
 
 <main class="container">
